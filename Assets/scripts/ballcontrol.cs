@@ -16,6 +16,7 @@ public class ballcontrol : MonoBehaviour
     void Start()
     {
         rg = GetComponent<Rigidbody>();
+        can.text = cansayaci +"";
     }
 
     // Update is called once per frame
