@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ballcontrol : MonoBehaviour
 {
-    public UnityEngine.UI.Text can;
+    public TextMeshProUGUI can;
     public UnityEngine.UI.Button replay;
     public TextMeshProUGUI durum;
     private Rigidbody rg;
@@ -27,6 +27,7 @@ public class ballcontrol : MonoBehaviour
             gamestate = false;
             durum.text = "GAME OVER!!:(";
             replay.gameObject.SetActive(true);
+            gamestate = false;
         }
     }
 
@@ -54,6 +55,7 @@ public class ballcontrol : MonoBehaviour
         {
             durum.text = "YOU WON!!:)";
             rg.velocity = Vector3.zero;
+            gamestate = false;
         }
         else if(! objname.Equals("gameplain") && !objname.Equals("anotherplain"))
         {
