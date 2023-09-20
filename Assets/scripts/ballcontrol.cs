@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,7 +9,9 @@ public class ballcontrol : MonoBehaviour
     public TextMeshProUGUI can;
     public UnityEngine.UI.Button replay;
     public TextMeshProUGUI durum;
+    public TextMeshProUGUI time;
     private Rigidbody rg;
+    float timecount = 0.00f;
     public float hiz = 1.3f;
     int cansayaci = 3;
     bool gamestate = true;
@@ -22,6 +25,13 @@ public class ballcontrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gamestate)
+        {
+            timecount += Time.deltaTime;
+            time.text = "" + String.Format("{0:0.00}", (float)timecount);
+        }
+        
+
         if (cansayaci == 0)
         {
             gamestate = false;
