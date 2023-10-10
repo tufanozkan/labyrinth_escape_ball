@@ -1,3 +1,8 @@
 # labyrinth_espace_ball
 
-      The goal of the game is to try to escape from the maze without hitting the walls of the maze by moving a ball with the arrow keys. While developing this project, I used a few different methods for collision detection, camera tracking, and evaluating win/lose conditions.
+      The goal of the game is to first solve the maze, and then try to escape from the maze within a set time limit by moving a ball with the arrow keys without hitting the walls of the maze. While developing this project, I used a few different methods and UnityEngine library.
+Usage:
+•Collision detection
+•Camera tracking
+•Rigidbody
+
